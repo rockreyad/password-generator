@@ -818,6 +818,10 @@ video {
   accent-color: #A6FEB0;
 }
 
+.filter{
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .c-checkbox > input[type="checkbox"] {
   width: 20px;
   height: 20px;
@@ -841,12 +845,12 @@ video {
 }
 
 .c-checkbox > div > i:first-child {
-  background: #ddd;
+  background: #a6feb0;
   transform: translatez(-10px);
 }
 
 .c-checkbox > div > i:last-child {
-  background: #a6feb0;
+  background: #ddd;
   transform: translatez(10px);
 }
 
