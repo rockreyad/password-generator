@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.c-checkbox > input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  opacity: 0;
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.c-checkbox > div {
+  display: grid;
+  pointer-events: none;
+  transition: transform 0.6s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  transform-style: preserve-3d;
+}
+.c-checkbox > div > * {
+  grid-area: 1/1;
+}
+.c-checkbox > div > i:first-child {
+  background: #ddd;
+  transform: translatez(-10px);
+}
+.c-checkbox > div > i:last-child {
+  background: #a6feb0;
+  transform: translatez(10px);
+}
+.c-checkbox > div > i:nth-of-type(2),
+.c-checkbox > div > i:nth-of-type(3) {
+  height: 10px;
+  transform: rotatex(90deg) rotatey(90deg);
+  position: relative;
+  top: 5px;
+}
+.c-checkbox > div > i:nth-of-type(2) {
+  background: #a6feb0;
+  right: 10px;
+}
+.c-checkbox > div > i:nth-of-type(3) {
+  background: darkslategray;
+  left: 10px;
+}
+input:checked + div {
+  transform: rotatey(180deg);
+}
+.c-checkbox {
+  display: grid;
+  width: 10px;
+  height: 10px;
+}
+.c-checkbox > * {
+  grid-area: 1/1;
+}
+label {
+  font: 60px Girassol;
+  color: lime;
+  text-shadow: 2px 2px 0 #a6feb0;
+  cursor: pointer;
+}
+main {
+  display: grid;
+  grid: repeat(5, 70px) / 90px 1fr;
+  align-items: center;
+  width: max-content;
+}
+body {
+  display: grid;
+  height: 100vh;
+  align-items: center;
+  justify-items: center;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}

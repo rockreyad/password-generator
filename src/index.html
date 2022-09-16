@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>Document</title>
+  </head>
+  <body class="bg-[#0E0D15]">
+    <div
+      class="flex flex-col justify-center mx-auto items-center w-3/4 xl:w-1/3 h-screen"
+    >
+      <h1 class="text-gray-400 font-mono mb-5 font-semibold">
+        Password Generator
+      </h1>
+      <div
+        class="bg-[#23222A] px-6 py-3 flex justify-between w-full rounded-md items-center"
+      >
+        <p class="text-xl md:text-2xl text-white font-bold font-mono">
+          HJKadj57%$7jk
+        </p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 16 16"
+          class="fill-[#A6FEB0] px-4 py-1 h-10 hover:fill-[#90be96]"
+        >
+          <path
+            d="M4.00029246,4.08524952 L4,10.5 C4,11.8254834 5.03153594,12.9100387 6.33562431,12.9946823 L6.5,13 L10.9143985,13.000703 C10.7082819,13.5829319 10.1528467,14 9.5,14 L6,14 C4.34314575,14 3,12.6568542 3,11 L3,5.5 C3,4.84678131 3.41754351,4.29108512 4.00029246,4.08524952 Z M11.5,2 C12.3284271,2 13,2.67157288 13,3.5 L13,10.5 C13,11.3284271 12.3284271,12 11.5,12 L6.5,12 C5.67157288,12 5,11.3284271 5,10.5 L5,3.5 C5,2.67157288 5.67157288,2 6.5,2 L11.5,2 Z M11.5,3 L6.5,3 C6.22385763,3 6,3.22385763 6,3.5 L6,10.5 C6,10.7761424 6.22385763,11 6.5,11 L11.5,11 C11.7761424,11 12,10.7761424 12,10.5 L12,3.5 C12,3.22385763 11.7761424,3 11.5,3 Z"
+          />
+        </svg>
+      </div>
+
+      <div
+        class="bg-[#23222A] px-6 py-3 flex flex-col justify-between w-full rounded-md items-center mt-6 text-gray-400 font-mono"
+      >
+        <div class="flex justify-between w-full space-x-32">
+          <p class="text-sm">Character Length</p>
+          <p class="text-2xl text-[#A6FEB0] font-semibold font-mono">16</p>
+        </div>
+
+        <div class="w-full flex my-4">
+          <input
+            type="range"
+            class="w-full accent-[#A6FEB0] cursor-w-resize h-2 rounded"
+            id="points"
+            name="points"
+            min="0"
+            max="20"
+          />
+        </div>
+
+        <div class="w-full">
+          <ul>
+            <li class="py-2 flex space-x-7">
+              <div class="c-checkbox">
+                <input class="c-checkbox" type="checkbox" id="trois" checked />
+                <!-- cube design ↴ -->
+                <div><i></i><i></i><i></i><i></i></div>
+              </div>
+              <span class="text-gray-300">Include Uppercase Letters</span>
+            </li>
+            <li class="py-2 flex space-x-7">
+              <div class="c-checkbox">
+                <input class="c-checkbox" type="checkbox" id="trois" checked />
+                <!-- cube design ↴ -->
+                <div><i></i><i></i><i></i><i></i></div>
+              </div>
+              <span class="text-gray-300">Include Lowercase Letters</span>
+            </li>
+            <li class="py-2 flex space-x-7">
+              <div class="c-checkbox">
+                <input class="c-checkbox" type="checkbox" id="trois" checked />
+                <!-- cube design ↴ -->
+                <div><i></i><i></i><i></i><i></i></div>
+              </div>
+              <span class="text-gray-300">Include Numbers</span>
+            </li>
+            <li class="py-2 flex space-x-7">
+              <div class="c-checkbox">
+                <input class="c-checkbox" type="checkbox" id="trois" checked />
+                <!-- cube design ↴ -->
+                <div><i></i><i></i><i></i><i></i></div>
+              </div>
+              <span class="text-gray-300">Include Symbols</span>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="bg-[#18171F] w-full mt-2 flex justify-between items-center px-2 md:px-6 py-1 md:py-4"
+        >
+          <p class="text-gray-500 uppercase font-semibold text-xs md:text-base">
+            strength
+          </p>
+          <div class="flex flex-col md:flex-row space-y-0.5 md:space-x-2">
+            <p
+              class="text-gray-300 uppercase font-semibold md:font-bold text-sm md:text-xl"
+            >
+              AVERAGE
+            </p>
+            <div class="flex space-x-2">
+              <div class="bg-green-400 px-0.5 md:px-1.5 h-1 md:h-auto"></div>
+              <div class="bg-green-400 px-0.5 md:px-1.5 h-1 md:h-auto"></div>
+              <div class="bg-green-400 px-0.5 md:px-1.5 h-1 md:h-auto"></div>
+              <div class="bg-green-400 px-0.5 md:px-1.5 h-1 md:h-auto"></div>
+              <div class="bg-gray-400 px-0.5 md:px-1.5 h-1 md:h-auto"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full mt-4">
+          <button
+            class="bg-[#A6FEB0] hover:bg-[#90be96] text-gray-600 uppercase font-semibold text-lg md:text-xl w-full rounded py-3"
+          >
+            generate
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

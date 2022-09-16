@@ -1,0 +1,21 @@
+{
+  "name": "password-generator",
+  "version": "1.0.0",
+  "description": "Strong Password Generator Tool",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss -i ./src/styles/tailwind.css -o ./src/styles/main.css --watch"
+  },
+  "keywords": [
+    "password-generate",
+    "generate",
+    "strong",
+    "password"
+  ],
+  "author": "Narc.Dev",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
+  }
+}
