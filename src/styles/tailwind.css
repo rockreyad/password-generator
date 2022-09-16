@@ -22,11 +22,11 @@
   grid-area: 1/1;
 }
 .c-checkbox > div > i:first-child {
-  background: #ddd;
+  background: #a6feb0;
   transform: translatez(-10px);
 }
 .c-checkbox > div > i:last-child {
-  background: #a6feb0;
+  background: #ddd;
   transform: translatez(10px);
 }
 .c-checkbox > div > i:nth-of-type(2),

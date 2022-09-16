@@ -17,13 +17,16 @@
       <div
         class="bg-[#23222A] px-6 py-3 flex justify-between w-full rounded-md items-center"
       >
-        <p class="text-xl md:text-2xl text-white font-bold font-mono">
+        <p
+          id="genPass"
+          class="text-xl md:text-2xl text-white font-bold font-mono"
+        >
           HJKadj57%$7jk
         </p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 16 16"
-          class="fill-[#A6FEB0] px-4 py-1 h-10 hover:fill-[#90be96]"
+          class="fill-[#A6FEB0] h-10 hover:fill-[#90be96]"
         >
           <path
             d="M4.00029246,4.08524952 L4,10.5 C4,11.8254834 5.03153594,12.9100387 6.33562431,12.9946823 L6.5,13 L10.9143985,13.000703 C10.7082819,13.5829319 10.1528467,14 9.5,14 L6,14 C4.34314575,14 3,12.6568542 3,11 L3,5.5 C3,4.84678131 3.41754351,4.29108512 4.00029246,4.08524952 Z M11.5,2 C12.3284271,2 13,2.67157288 13,3.5 L13,10.5 C13,11.3284271 12.3284271,12 11.5,12 L6.5,12 C5.67157288,12 5,11.3284271 5,10.5 L5,3.5 C5,2.67157288 5.67157288,2 6.5,2 L11.5,2 Z M11.5,3 L6.5,3 C6.22385763,3 6,3.22385763 6,3.5 L6,10.5 C6,10.7761424 6.22385763,11 6.5,11 L11.5,11 C11.7761424,11 12,10.7761424 12,10.5 L12,3.5 C12,3.22385763 11.7761424,3 11.5,3 Z"
@@ -36,17 +39,24 @@
       >
         <div class="flex justify-between w-full space-x-32">
           <p class="text-sm">Character Length</p>
-          <p class="text-2xl text-[#A6FEB0] font-semibold font-mono">16</p>
+          <p
+            id="charLen"
+            class="text-2xl text-[#A6FEB0] font-semibold font-mono"
+          >
+            8
+          </p>
         </div>
 
         <div class="w-full flex my-4">
           <input
             type="range"
             class="w-full accent-[#A6FEB0] cursor-w-resize h-2 rounded"
-            id="points"
-            name="points"
+            id="len"
+            name="len"
             min="0"
             max="20"
+            value="8"
+            onchange="changeStrn()"
           />
         </div>
 
@@ -54,7 +64,13 @@
           <ul>
             <li class="py-2 flex space-x-7">
               <div class="c-checkbox">
-                <input class="c-checkbox" type="checkbox" id="trois" checked />
+                <input
+                  class="c-checkbox"
+                  type="checkbox"
+                  id="upperCheck"
+                  checked
+                  onchange="validate()"
+                />
                 <!-- cube design ↴ -->
                 <div><i></i><i></i><i></i><i></i></div>
               </div>
@@ -62,7 +78,13 @@
             </li>
             <li class="py-2 flex space-x-7">
               <div class="c-checkbox">
-                <input class="c-checkbox" type="checkbox" id="trois" checked />
+                <input
+                  class="c-checkbox"
+                  type="checkbox"
+                  id="lowerCheck"
+                  checked
+                  onchange="validate()"
+                />
                 <!-- cube design ↴ -->
                 <div><i></i><i></i><i></i><i></i></div>
               </div>
@@ -70,7 +92,12 @@
             </li>
             <li class="py-2 flex space-x-7">
               <div class="c-checkbox">
-                <input class="c-checkbox" type="checkbox" id="trois" checked />
+                <input
+                  class="c-checkbox"
+                  type="checkbox"
+                  id="numberCheck"
+                  onchange="validate()"
+                />
                 <!-- cube design ↴ -->
                 <div><i></i><i></i><i></i><i></i></div>
               </div>
@@ -78,7 +105,12 @@
             </li>
             <li class="py-2 flex space-x-7">
               <div class="c-checkbox">
-                <input class="c-checkbox" type="checkbox" id="trois" checked />
+                <input
+                  class="c-checkbox"
+                  type="checkbox"
+                  id="specialCheck"
+                  onchange="validate()"
+                />
                 <!-- cube design ↴ -->
                 <div><i></i><i></i><i></i><i></i></div>
               </div>
@@ -96,27 +128,47 @@
           <div class="flex flex-col md:flex-row space-y-0.5 md:space-x-2">
             <p
               class="font-fredoka text-gray-300 uppercase font-base md:font-medium text-sm md:text-xl"
+              id="passStrength"
             >
               medium
             </p>
-            <div class="flex space-x-2 justify-center md:justify-end">
-              <div class="bg-green-400 px-0.5 md:px-1.5 h-1 md:h-auto"></div>
-              <div class="bg-green-400 px-0.5 md:px-1.5 h-1 md:h-auto"></div>
-              <div class="bg-green-400 px-0.5 md:px-1.5 h-1 md:h-auto"></div>
-              <div class="bg-green-400 px-0.5 md:px-1.5 h-1 md:h-auto"></div>
-              <div class="bg-gray-400 px-0.5 md:px-1.5 h-1 md:h-auto"></div>
+            <div class="flex space-x-2 justify-end md:justify-end">
+              <div
+                id="indicator-1"
+                class="bg-gray-400 px-0.5 md:px-1.5 h-1 md:h-auto"
+              ></div>
+              <div
+                id="indicator-2"
+                class="bg-gray-400 px-0.5 md:px-1.5 h-1 md:h-auto"
+              ></div>
+              <div
+                id="indicator-3"
+                class="bg-gray-400 px-0.5 md:px-1.5 h-1 md:h-auto"
+              ></div>
+              <div
+                id="indicator-4"
+                class="bg-gray-400 px-0.5 md:px-1.5 h-1 md:h-auto"
+              ></div>
+              <div
+                id="indicator-5"
+                class="bg-gray-400 px-0.5 md:px-1.5 h-1 md:h-auto"
+              ></div>
             </div>
           </div>
         </div>
 
         <div class="w-full mt-4">
           <button
+            id="genPassBtn"
             class="bg-[#A6FEB0] hover:bg-[#90be96] text-gray-600 uppercase font-semibold text-lg md:text-xl w-full rounded py-3"
+            onclick="password()"
           >
             generate
           </button>
         </div>
       </div>
     </div>
+
+    <script src="./main.js"></script>
   </body>
 </html>
