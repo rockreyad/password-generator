@@ -599,20 +599,8 @@ video {
   height: 0.25rem;
 }
 
-.w-3\/4{
-  width: 75%;
-}
-
 .w-full{
   width: 100%;
-}
-
-.w-3\/5{
-  width: 60%;
-}
-
-.w-1\/3{
-  width: 33.333333%;
 }
 
 .cursor-w-resize{
@@ -625,10 +613,6 @@ video {
 
 .items-center{
   align-items: center;
-}
-
-.justify-end{
-  justify-content: flex-end;
 }
 
 .justify-center{
@@ -711,10 +695,6 @@ video {
   fill: #A6FEB0;
 }
 
-.p-2{
-  padding: 0.5rem;
-}
-
 .p-4{
   padding: 1rem;
 }
@@ -761,10 +741,6 @@ video {
 
 .font-mono{
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
-.font-fredoka{
-  font-family: Fredoka One, cursive;
 }
 
 .text-xl{
@@ -938,27 +914,9 @@ body {
   fill: #90be96;
 }
 
-@media (min-width: 640px){
-  .sm\:w-2\/3{
-    width: 66.666667%;
-  }
-}
-
 @media (min-width: 768px){
   .md\:h-auto{
     height: auto;
-  }
-
-  .md\:w-1\/3{
-    width: 33.333333%;
-  }
-
-  .md\:w-2\/3{
-    width: 66.666667%;
-  }
-
-  .md\:w-2\/5{
-    width: 40%;
   }
 
   .md\:w-2\/4{
@@ -1014,26 +972,8 @@ body {
     line-height: 1.75rem;
   }
 
-  .md\:font-bold{
-    font-weight: 700;
-  }
-
-  .md\:font-semibold{
-    font-weight: 600;
-  }
-
   .md\:font-medium{
     font-weight: 500;
-  }
-}
-
-@media (min-width: 1024px){
-  .lg\:w-1\/3{
-    width: 33.333333%;
-  }
-
-  .lg\:w-1{
-    width: 0.25rem;
   }
 }
 
