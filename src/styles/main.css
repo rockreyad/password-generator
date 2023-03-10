@@ -913,8 +913,8 @@ body {
 }
 
 @media (min-width: 768px){
-  .md\:h-auto{
-    height: auto;
+  .md\:h-1\/2{
+    height: 50%;
   }
 
   .md\:w-2\/4{
@@ -972,6 +972,25 @@ body {
 
   .md\:font-medium{
     font-weight: 500;
+  }
+}
+
+@media (min-width: 1024px){
+  .lg\:font-mono{
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .lg\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .lg\:font-normal{
+    font-weight: 400;
+  }
+
+  .lg\:font-thin{
+    font-weight: 100;
   }
 }
 

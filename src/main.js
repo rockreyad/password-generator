@@ -21,7 +21,7 @@ password();
 function password() {
   var pass = "";
   let passLen = len.value;
-  console.log(passLen);
+  
   let i = 0;
   while (i < passLen) {
     const xValue = generateX();
@@ -81,7 +81,6 @@ function getSpecial() {
 function changeStrn() {
   charLen.innerText = len.value;
 
-  console.log("click");
   if (
     upperCheck.checked &&
     lowerCheck.checked &&
@@ -112,7 +111,7 @@ function indicatorCheck(password) {
     else if (password[i] >= "0" && password[i] <= "9") number++;
     else special++;
   }
-  console.log(upper, lower, number, special);
+  
   if (password.length > 6) {
     if (upper && lower && number && special) {
       passStrength.innerText = strengthValue[4];
